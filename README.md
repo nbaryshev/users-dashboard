@@ -1,3 +1,7 @@
+# General Note
+
+This repository is aimed to show the front-end code of the users-dashboard-project repository that work in coperation with Flask. Don't try to run this repository since it depended on the back-end that Flask serves. Check out the users-dashboard-project to see the project. Thank you
+
 # UsersDashboard
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.9.
