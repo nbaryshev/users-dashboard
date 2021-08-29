@@ -1,0 +1,86 @@
+.users-dashboard-wrapper {
+  display: block;
+  max-width: 1000px;
+  margin: auto auto;
+  padding: 20px;
+  & .users-dashboard {
+    display: flex;
+    & .user-cards {
+      display: block;
+      & .user-card {
+        display: flex;
+        align-items: center;
+        min-height: 100px;
+        padding: 10px;
+        position: relative;
+        &:not(:last-child) {
+          border-bottom: 1px solid #e1e1e1;
+        }
+        &:hover {
+          box-shadow: 0px 5px 5px #e1e1e1, 0px -5px 5px #e1e1e1;
+        }
+        & fa-icon {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          cursor: pointer;
+          color: #9a9a9a;
+          &:hover {
+            color: #585858;
+          }
+        }
+        & app-user:hover {
+          cursor: pointer;
+        }
+      }
+    }
+    & app-profile-view {
+      width: 75%;
+      margin-left: 20px;
+    }
+  }
+  & .horizontal-line {
+    margin-bottom: 20px;
+    border: 0;
+    height: 1px;
+    background: #333;
+    background-image: linear-gradient(to right, #ccc, #333, #ccc);
+  }
+}
+
+.lds-ring {
+  display: inline-block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 50px 50%;
+}
+.lds-ring div {
+  box-sizing: border-box;
+  display: block;
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+  border-color: #AAAAAA transparent transparent transparent;
+}
+.lds-ring div:nth-child(1) {
+  animation-delay: -0.45s;
+}
+.lds-ring div:nth-child(2) {
+  animation-delay: -0.3s;
+}
+.lds-ring div:nth-child(3) {
+  animation-delay: -0.15s;
+}
+@keyframes lds-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

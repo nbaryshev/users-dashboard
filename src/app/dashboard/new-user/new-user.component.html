@@ -1,0 +1,19 @@
+<div class="new-user-container">
+  <button (click)="toggleForm()" class="add-new-user button">+ Add New User</button>
+  <div *ngIf="openAddUser" class="form-wrapper">
+    <form [formGroup]="userForm" class="form">
+      <div class="input-block">
+        <div><label for="">Username:</label><input formControlName="userName" type="text" placeholder="User Name" /></div>
+        <div><label for="">Name:</label><input formControlName="name" type="text" placeholder="Name" /></div>
+        <div><label for="">Second Name:</label><input formControlName="secondName"  type="text" placeholder="Second Name" /></div>
+        <div><label for="">Age:</label><input formControlName="age"  type="number" placeholder="Age" /></div>
+      </div>
+      <div class="input-block">
+        <div><label for="">Country:</label><input formControlName="country" type="text" placeholder="Country" /></div>
+        <div><label for="">City:</label><input formControlName="city" type="text" placeholder="City" /></div>
+        <div><label for="">Cell:</label><input formControlName="cell"  type="text" placeholder="Cell" /></div>
+      </div>
+    </form>
+    <button [disabled]="!userForm.valid" (click)="onSubmit()" class="submit button">Submit</button>
+  </div>
+</div>

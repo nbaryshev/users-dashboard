@@ -1,0 +1,63 @@
+.new-user-container {
+  max-width: 100%;
+  margin-bottom: 20px;
+  & .form-wrapper {
+    max-width: 100%;
+    & .form {
+      display: flex;
+      box-sizing: border-box;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin: 20px 0;
+      & .input-block {
+        width: 300px;
+        &:not(:last-child) {
+          margin-right: 30px;
+        }
+        @media only screen and (max-width: 685px) {
+          margin-right: 0 !important;
+        }
+        & div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          flex-wrap: wrap;
+          height: 30px;
+          margin-bottom: 15px;
+          & label {
+            font-weight: bold;
+          }
+          & input {
+            height: 25px;
+            margin-left: 10px;
+          }
+        }
+      }
+      div {
+        display: block;
+      }
+    }
+  }
+  & .add-new-user {
+    background-color: #3d7bff;
+    width: auto;
+  }
+  & .submit {
+    margin: 0 50%;
+    background-color: #3cb371;
+    width: 100px;
+    &:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+  }
+  & .button {
+    color: white;
+    height: 40px;
+    padding: 0 15px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+  }
+}

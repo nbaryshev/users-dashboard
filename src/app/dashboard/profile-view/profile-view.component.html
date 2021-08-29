@@ -1,0 +1,25 @@
+<div class="profile-view-wrapper">
+  <div class="profile-view">
+    <div class="top-section">
+      <div class="user-photo">
+        <img src="{{active.picture.large}}" alt="{{active.name.first}}'s profile photo">
+      </div>
+    </div>
+    <div class="bottom-section">
+      <div class="user-profile-full-wrapper">
+        <div class="left-card-side">
+          <div class="info-line"><strong>Full Name:</strong> {{active.name.first}} {{active.name.last}}</div>
+          <div class="info-line"><strong>Age:</strong> {{active.dob.age}}</div>
+          <div class="info-line"><strong>Email:</strong> {{active.email}}</div>
+          <div class="info-line"><strong>Cell:</strong> {{active.cell}}</div>
+        </div>
+        <div class="right-card-side">
+          <div class="info-line"><strong>Country:</strong> {{active.location.country}}</div>
+          <div class="info-line"><strong>City:</strong> {{active.location.city}}</div>
+          <div class="info-line"><strong>Username:</strong> {{active.login.username}}</div>
+          <div class="info-line"><strong>Registered:</strong> {{active.registered.date | date:'longDate'}}</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,19 @@
+<div class="lds-ring" *ngIf="!isLoaded"><div></div><div></div><div></div><div></div></div>
+<div class="users-dashboard-wrapper" *ngIf="isLoaded">
+  <app-new-user></app-new-user>
+  <hr class="horizontal-line">
+  <div class="users-dashboard">
+    <div class="user-cards">
+      <div class="user-card"
+        *ngFor="let user of usersDetails.results">
+        <app-user 
+          class="user"
+          [user]="user"
+          (click)="setActiveUser(user)">
+        </app-user>
+        <fa-icon [icon]="faCoffee" (click)=delete(user.login.username) alt="Delete user"></fa-icon>
+      </div>
+    </div>
+    <app-profile-view [active]="activeUser"></app-profile-view>
+  </div>
+</div>
